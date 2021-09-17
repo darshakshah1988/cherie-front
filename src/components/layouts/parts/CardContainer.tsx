@@ -1,6 +1,39 @@
 import { Card } from '../parts/Card';
 import styled from 'styled-components';
 
+
+const cardData=[{
+    title: "Tahnee LansdaleUntitled Greens, 2014",
+    Holders: "345 People ",
+    SolesRate: "35%",
+    ResidualQuantity:"345,345 Pieces",   
+    PublishDate:" 13 Sep 2021",
+    },
+    {
+        title: "Tahnee LansdaleUntitled Greens, 2014",
+        Holders: "345 People ",
+        SolesRate: "35%",
+        ResidualQuantity:"345,345 Pieces",   
+        PublishDate:" 13 Sep 2021",
+    },
+    {
+        title: "Tahnee LansdaleUntitled Greens, 2014",
+        Holders: "345 People ",
+        SolesRate: "35%",
+        ResidualQuantity:"345,345 Pieces",   
+        PublishDate:" 13 Sep 2021",
+    }
+
+
+
+
+]
+
+
+
+
+
+
 export const CardContainer = () => {
     return (
         <CardContainer.Wrapper>
@@ -9,9 +42,9 @@ export const CardContainer = () => {
             </CardContainer.Title>   
             <CardContainer.Artwork>
                    
-                <Card/>    
-                <Card/> 
-                <Card/>
+                {
+                    cardData.map((data)=>(<Card/>))
+                }
 
             </CardContainer.Artwork>
             <CardContainer.Title>
@@ -19,11 +52,9 @@ export const CardContainer = () => {
             </CardContainer.Title>
 
             <CardContainer.Artwork>
-                   
-                <Card/>    
-                <Card/> 
-                <Card/>
-
+                   {
+                    cardData.map((data)=>(<Card/>))
+                    }
             </CardContainer.Artwork>
 
         </CardContainer.Wrapper>
