@@ -1,6 +1,7 @@
 import { Card } from '../parts/Card';
 import styled from 'styled-components';
-
+import Pagination from '../../filters/Pagination';
+import { useState } from 'react';
 
 const cardData=[{
     title: "Tahnee LansdaleUntitled Greens, 2014",
@@ -32,6 +33,12 @@ const cardData=[{
 
 
 
+function handlePageClicked(){
+
+
+}
+
+
 
 
 export const CardContainer = () => {
@@ -47,6 +54,11 @@ export const CardContainer = () => {
                 }
 
             </CardContainer.Artwork>
+            <Pagination
+                pageCount={Math.ceil(50 / 10)}
+                onPageChange={handlePageClicked}
+                />
+
             <CardContainer.Title>
                 Traditional Artwork
             </CardContainer.Title>
@@ -57,6 +69,11 @@ export const CardContainer = () => {
                     }
             </CardContainer.Artwork>
 
+            <Pagination
+                pageCount={Math.ceil(50 / 10)}
+                onPageChange={handlePageClicked}
+                />
+
         </CardContainer.Wrapper>
     )
 }
@@ -64,7 +81,7 @@ export const CardContainer = () => {
 CardContainer.Wrapper = styled.div`
     flex-direction: column;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     max-width: 1140px;
     width: 100%;
@@ -72,6 +89,7 @@ CardContainer.Wrapper = styled.div`
     padding-left: 12px;
     margin-right: auto;
     margin-left: auto;
+    
 `;
 
 CardContainer.Title = styled.div`
@@ -80,10 +98,11 @@ CardContainer.Title = styled.div`
     margin-top: 30px;
     margin-left: 10px;
     font-size:32px;
-
+    width: 100%;
 `;
 
 CardContainer.Artwork=styled.div`
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

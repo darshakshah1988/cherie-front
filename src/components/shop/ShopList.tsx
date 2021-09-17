@@ -5,6 +5,7 @@ import NavbarShop from '../layouts/parts/NavbarShop';
 import FooterShop from '../layouts/parts/FooterShop';
 import { Card } from '../layouts/parts/Card';
 import { CardContainer } from '../layouts/parts/CardContainer';
+import Pagination from '../filters/Pagination';
 
 
 
@@ -18,7 +19,8 @@ export default function ShopList() {
   return (
     <ShopList.Wrapper>
       <NavbarShop></NavbarShop>   
-             <CardContainer></CardContainer>          
+             <CardContainer></CardContainer>    
+                
            <FooterShop></FooterShop>
     </ShopList.Wrapper>
   );
