@@ -38,7 +38,37 @@ const items=[
             src: '/ImageProd2.png',
             alt: 'Artist sample'
           }
+    },{
+        title: "Tahnee LansdaleUntitled Greens, 2014",
+        Holders: "345 People ",
+        SalesRate: "35%",
+        ResidualQuality:"345,345 Pieces",   
+        PublishDate:" 13 Sep 2021",
+        image: {
+            src: '/ImageProd2.png',
+            alt: 'Artist sample'
+          }
     }
+    ,{
+        title: "Tahnee LansdaleUntitled Greens, 2014",
+        Holders: "345 People ",
+        SalesRate: "35%",
+        ResidualQuality:"345,345 Pieces",   
+        PublishDate:" 13 Sep 2021",
+        image: {
+            src: '/ImageProd2.png',
+            alt: 'Artist sample'
+          }},
+          {
+            title: "Tahnee LansdaleUntitled Greens, 2014",
+            Holders: "345 People ",
+            SalesRate: "35%",
+            ResidualQuality:"345,345 Pieces",   
+            PublishDate:" 13 Sep 2021",
+            image: {
+                src: '/ImageProd2.png',
+                alt: 'Artist sample'
+              }}
 
 ]
 

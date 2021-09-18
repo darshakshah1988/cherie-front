@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import Image from 'next/image';
 import { title } from 'process';
@@ -28,7 +28,7 @@ export const Card = (props:CardProps) => {
         
         <Card.FullCard>
            {props.cardItems.map(prop=>(
-              <Card.Wrapper>
+              <Card.Wrapper >
               <Card.Media>
                    <Image src={prop.image.src}  layout="fill" />
                    <Card.Button>On Sale</Card.Button>
@@ -125,6 +125,7 @@ Card.Button=styled.button`
     color: #1BB964;
     font-size: 12px;
     border-radius: 15px;
+    border: none;
 
 `;
 
@@ -150,6 +151,7 @@ Card.Content = styled.div`
 
 Card.Title = styled.div`
     margin-bottom: 10px;
+    font-weight: 400px;
   
 `;
 
@@ -185,6 +187,10 @@ Card.TopContent=styled.div`
 Card.FullCard=styled.div`
     display: flex;
     width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 100%;
+    flex-wrap: wrap;
 
 `;
 
