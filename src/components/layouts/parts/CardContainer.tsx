@@ -1,43 +1,51 @@
-import { Card } from '../parts/Card';
+import {Card}  from '../parts/Card';
 import styled from 'styled-components';
 import Pagination from '../../filters/Pagination';
 import { useState } from 'react';
 
-const cardData=[{
-    title: "Tahnee LansdaleUntitled Greens, 2014",
-    Holders: "345 People ",
-    SolesRate: "35%",
-    ResidualQuantity:"345,345 Pieces",   
-    PublishDate:" 13 Sep 2021",
+
+
+const items=[
+    {
+        title: "Tahnee LansdaleUntitled Greens, 2014",
+        Holders: "345 People ",
+        SalesRate: "35%",
+        ResidualQuality:"345,345 Pieces",   
+        PublishDate:" 13 Sep 2021",
+        image: {
+            src: '/Product3.png',
+            alt: 'Artist sample'
+          }
     },
     {
         title: "Tahnee LansdaleUntitled Greens, 2014",
         Holders: "345 People ",
-        SolesRate: "35%",
-        ResidualQuantity:"345,345 Pieces",   
+        SalesRate: "35%",
+        ResidualQuality:"345,345 Pieces",   
         PublishDate:" 13 Sep 2021",
+        image: {
+            src: '/ImageProd.png',
+            alt: 'Artist sample'
+          }
     },
     {
         title: "Tahnee LansdaleUntitled Greens, 2014",
         Holders: "345 People ",
-        SolesRate: "35%",
-        ResidualQuantity:"345,345 Pieces",   
+        SalesRate: "35%",
+        ResidualQuality:"345,345 Pieces",   
         PublishDate:" 13 Sep 2021",
+        image: {
+            src: '/ImageProd2.png',
+            alt: 'Artist sample'
+          }
     }
-
-
-
 
 ]
 
-
-
-
 function handlePageClicked(){
-
+    
 
 }
-
 
 
 
@@ -49,13 +57,12 @@ export const CardContainer = () => {
             </CardContainer.Title>   
             <CardContainer.Artwork>
                    
-                {
-                    cardData.map((data)=>(<Card/>))
-                }
+                <Card cardItems={items}/>
+                
 
             </CardContainer.Artwork>
             <Pagination
-                pageCount={Math.ceil(50 / 10)}
+                pageCount={Math.ceil(30 / 10)}
                 onPageChange={handlePageClicked}
                 />
 
@@ -64,9 +71,7 @@ export const CardContainer = () => {
             </CardContainer.Title>
 
             <CardContainer.Artwork>
-                   {
-                    cardData.map((data)=>(<Card/>))
-                    }
+                <Card cardItems={items}/>
             </CardContainer.Artwork>
 
             <Pagination
@@ -90,6 +95,7 @@ CardContainer.Wrapper = styled.div`
     margin-right: auto;
     margin-left: auto;
     
+    
 `;
 
 CardContainer.Title = styled.div`
@@ -105,7 +111,7 @@ CardContainer.Artwork=styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
    
 
 `;

@@ -590,6 +590,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-paginate@^7.1.1":
+  "integrity" "sha512-94cEJHfBaINba2XGQOWFJF/tYe+AImIhOPqMCfqyeFOgk0qUpDZyDOOW76A1rgdtWndR8UwsMPgV/uuTM8vZ7w=="
+  "resolved" "https://registry.npmjs.org/@types/react-paginate/-/react-paginate-7.1.1.tgz"
+  "version" "7.1.1"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-redux@^7.1.16", "@types/react-redux@^7.1.18":
   "integrity" "sha512-9iwAsPyJ9DLTRH+OFeIrm9cAbIj1i2ANL3sKQFATqnPWRbg+jEFXyZOKHiQK/N86pNRXbb4HRxAxo0SIX1XwzQ=="
   "resolved" "https://registry.npmjs.org/@types/react-redux/-/react-redux-7.1.18.tgz"

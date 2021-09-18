@@ -1,87 +1,113 @@
 import React from 'react'
 import styled from 'styled-components';
 import Image from 'next/image';
-import { isArrayLike } from 'lodash';
-import { CardContent } from '@material-ui/core';
+import { title } from 'process';
 
 
+export interface CardImage{
+    src:string;
+    alt:string;
+}
 
-export const Card = () => {
+export interface CardData {
+    title?: string; 
+    Holders?: string;
+    SalesRate?:string;
+    ResidualQuality?:string; 
+    PublishDate?:string;
+    image:CardImage; 
+}
+export interface CardProps{
+    cardItems:CardData[];
+}
+
+
+export const Card = (props:CardProps) => {   
+      
+    return (   
+        
+        <Card.FullCard>
+           {props.cardItems.map(prop=>(
+              <Card.Wrapper>
+              <Card.Media>
+                   <Image src={prop.image.src}  layout="fill" />
+                   <Card.Button>On Sale</Card.Button>
+   
+               </Card.Media>
+               <Card.Content>
+                   <Card.TopContent>
+                   <Card.Title>
+                       {prop.title}
+                   </Card.Title>
+   
+                   <Card.Details>
+                       
+                   </Card.Details>
+   
+                   <Card.Details>
+                       Sales Rate: {prop.SalesRate}
+                   </Card.Details>
+                   
+                   <Card.Details>
+                      Residual Qualtity:{prop.ResidualQuality}
+                   </Card.Details>
+                   
+                   <Card.Details>
+                      Publish Date: {prop.PublishDate}
+                   </Card.Details>
+   
+                   </Card.TopContent>
+                   <Card.ContentBottom>
+                       <Card.Action>
+                           10 Likes
+                       </Card.Action>
+   
+                       <Card.Action>
+                           38 comments
+                       </Card.Action>
+   
+                   </Card.ContentBottom>
+   
+                   <Card.Seperator/>
+                   
+                   <Card.ContentBottom>
+                       <Card.Action>
+                           <Card.BottomButton> <img src="/Like.svg" alt="An SVG of an eye" />  Like</Card.BottomButton>
+                       </Card.Action>
+   
+                       <Card.Action>
+                           <Card.BottomButton><img src="/Comment.svg" alt="An SVG of an eye" />  Comment</Card.BottomButton>
+                       </Card.Action>
+   
+                   </Card.ContentBottom>
+                   
    
    
-    return (
-
-       <Card.Wrapper>
-           <Card.Media>
-                <Image src='/ImageProd.png' height="100%" width="100%" layout="fill" />
-                <Card.Button>On Sale</Card.Button>
-
-            </Card.Media>
-            <Card.Content>
-                <Card.TopContent>
-                <Card.Title>
-                    TAHNEE LANDSLIDE Untitled Greens,2014
-                </Card.Title>
-
-                <Card.Details>
-                    Holders: 345 People
-                </Card.Details>
-
-                <Card.Details>
-                    Sales Rate: 35%
-                </Card.Details>
-                
-                <Card.Details>
-                   Residual Qualtity:345,345 Pieces
-                </Card.Details>
-                
-                <Card.Details>
-                   Publish Date: 13 Sep 2021
-                </Card.Details>
-
-                </Card.TopContent>
-                <Card.ContentBottom>
-                    <Card.Action>
-                        10 Likes
-                    </Card.Action>
-
-                    <Card.Action>
-                        38 comments
-                    </Card.Action>
-
-                </Card.ContentBottom>
-
-                <Card.Seperator/>
-                
-                <Card.ContentBottom>
-                    <Card.Action>
-                        <Card.BottomButton> <img src="/Like.svg" alt="An SVG of an eye" />  Like</Card.BottomButton>
-                    </Card.Action>
-
-                    <Card.Action>
-                        <Card.BottomButton><img src="/Comment.svg" alt="An SVG of an eye" />  Comment</Card.BottomButton>
-                    </Card.Action>
-
-                </Card.ContentBottom>
-                
+                  
+               </Card.Content>
+          </Card.Wrapper>
 
 
-               
-            </Card.Content>
-       </Card.Wrapper>
+
+           ))}
+                    
+       </Card.FullCard>
+        
+       
     )
 }
 
 Card.Wrapper = styled.div`    
-    display: flex;
-    
+    display: flex;    
     text-align: left;
     margin-top : 20px ;
     margin-bottom: 20px;
     background-color: #F9F9F9;  
+    min-width: 300px;
     max-width: 300px;  
     flex-direction:column;
     min-height: 500px;
+    max-height: 800px;
     border-radius:10px ;
     align-items: left;
     margin-left: 10px;
@@ -156,6 +182,11 @@ Card.TopContent=styled.div`
 
 `;
 
+Card.FullCard=styled.div`
+    display: flex;
+    width: 100%;
+
+`;
 
 
 Card.BottomButton=styled.button`
