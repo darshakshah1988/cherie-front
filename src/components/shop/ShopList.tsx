@@ -3,12 +3,8 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import NavbarShop from '../layouts/parts/NavbarShop';
 import FooterShop from '../layouts/parts/FooterShop';
-import { Card } from '../layouts/parts/Card';
+
 import { CardContainer } from '../layouts/parts/CardContainer';
-import Pagination from '../filters/Pagination';
-
-
-
 
 type Props = {
   username: string | null;
@@ -19,8 +15,7 @@ export default function ShopList() {
   return (
     <ShopList.Wrapper>
       <NavbarShop></NavbarShop>   
-             <CardContainer></CardContainer>    
-                
+             <CardContainer ></CardContainer>                 
            <FooterShop></FooterShop>
     </ShopList.Wrapper>
   );

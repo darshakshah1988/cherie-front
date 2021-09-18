@@ -2,75 +2,8 @@ import {Card}  from '../parts/Card';
 import styled from 'styled-components';
 import Pagination from '../../filters/Pagination';
 import { useState } from 'react';
-
-
-
-const items=[
-    {
-        title: "Tahnee LansdaleUntitled Greens, 2014",
-        Holders: "345 People ",
-        SalesRate: "35%",
-        ResidualQuality:"345,345 Pieces",   
-        PublishDate:" 13 Sep 2021",
-        image: {
-            src: '/Product3.png',
-            alt: 'Artist sample'
-          }
-    },
-    {
-        title: "Tahnee LansdaleUntitled Greens, 2014",
-        Holders: "345 People ",
-        SalesRate: "35%",
-        ResidualQuality:"345,345 Pieces",   
-        PublishDate:" 13 Sep 2021",
-        image: {
-            src: '/ImageProd.png',
-            alt: 'Artist sample'
-          }
-    },
-    {
-        title: "Tahnee LansdaleUntitled Greens, 2014",
-        Holders: "345 People ",
-        SalesRate: "35%",
-        ResidualQuality:"345,345 Pieces",   
-        PublishDate:" 13 Sep 2021",
-        image: {
-            src: '/ImageProd2.png',
-            alt: 'Artist sample'
-          }
-    },{
-        title: "Tahnee LansdaleUntitled Greens, 2014",
-        Holders: "345 People ",
-        SalesRate: "35%",
-        ResidualQuality:"345,345 Pieces",   
-        PublishDate:" 13 Sep 2021",
-        image: {
-            src: '/ImageProd2.png',
-            alt: 'Artist sample'
-          }
-    }
-    ,{
-        title: "Tahnee LansdaleUntitled Greens, 2014",
-        Holders: "345 People ",
-        SalesRate: "35%",
-        ResidualQuality:"345,345 Pieces",   
-        PublishDate:" 13 Sep 2021",
-        image: {
-            src: '/ImageProd2.png',
-            alt: 'Artist sample'
-          }},
-          {
-            title: "Tahnee LansdaleUntitled Greens, 2014",
-            Holders: "345 People ",
-            SalesRate: "35%",
-            ResidualQuality:"345,345 Pieces",   
-            PublishDate:" 13 Sep 2021",
-            image: {
-                src: '/ImageProd2.png',
-                alt: 'Artist sample'
-              }}
-
-]
+import Arts from '../../../admin/constants/Arts';
+import { ArtCardData } from '../../../admin/types/artTypes';
 
 function handlePageClicked(){
     
@@ -87,7 +20,7 @@ export const CardContainer = () => {
             </CardContainer.Title>   
             <CardContainer.Artwork>
                    
-                <Card cardItems={items}/>
+                <Card cardItems={Arts}/>
                 
 
             </CardContainer.Artwork>
@@ -101,7 +34,7 @@ export const CardContainer = () => {
             </CardContainer.Title>
 
             <CardContainer.Artwork>
-                <Card cardItems={items}/>
+                <Card cardItems={Arts}/>
             </CardContainer.Artwork>
 
             <Pagination
@@ -132,9 +65,10 @@ CardContainer.Title = styled.div`
     display: flex;
     text-align: left;
     margin-top: 30px;
-    margin-left: 10px;
+    margin-left: 0px;
     font-size:32px;
     width: 100%;
+   
 `;
 
 CardContainer.Artwork=styled.div`
