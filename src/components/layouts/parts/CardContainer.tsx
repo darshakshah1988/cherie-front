@@ -1,18 +1,37 @@
 import {Card}  from '../parts/Card';
 import styled from 'styled-components';
 import Pagination from '../../filters/Pagination';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Arts from '../../../admin/constants/Arts';
 import { ArtCardData } from '../../../admin/types/artTypes';
+import { number } from 'yup/lib/locale';
 
-function handlePageClicked(){
-    
 
-}
+
+const PageCount= Arts.length;
 
 
 
 export const CardContainer = () => {
+
+    const [data,setData]=useState(Arts);        
+    const [currentPage,setCurrentPage]=useState(1);
+    const [postPerPage,setPostsPerPage]=useState(6);
+    const indexOfLastPost=currentPage * postPerPage;
+    const indexOfFirstPost=indexOfLastPost- postPerPage;
+    const currentData=data.slice(indexOfFirstPost,indexOfLastPost)    
+    
+    useEffect(() => { 
+    
+    },[currentPage]);
+    
+    function handlePageClicked(number:any){
+        
+        console.log(number.selected)
+        setCurrentPage(number.selected+1)
+    }
+      
+       
     return (
         <CardContainer.Wrapper>
              <CardContainer.Title>
@@ -20,7 +39,7 @@ export const CardContainer = () => {
             </CardContainer.Title>   
             <CardContainer.Artwork>
                    
-                <Card cardItems={Arts}/>
+                <Card cardItems={currentData}/>
                 
 
             </CardContainer.Artwork>
@@ -34,11 +53,11 @@ export const CardContainer = () => {
             </CardContainer.Title>
 
             <CardContainer.Artwork>
-                <Card cardItems={Arts}/>
+                <Card cardItems={data}/>
             </CardContainer.Artwork>
 
             <Pagination
-                pageCount={Math.ceil(50 / 10)}
+                pageCount={Math.ceil(PageCount/ 10)}
                 onPageChange={handlePageClicked}
                 />
 

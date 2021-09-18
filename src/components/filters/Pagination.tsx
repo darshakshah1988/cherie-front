@@ -18,6 +18,7 @@ export default function Pagination(props: Props) {
   return (
     <Pagination.Wrap>
       <ReactPaginate
+        
         initialPage={initialPage ? initialPage : 0}
         pageCount={pageCount}
         pageRangeDisplayed={10}
