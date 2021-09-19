@@ -108,11 +108,10 @@ Card.Wrapper = styled.div`
     margin-top : 20px ;
     margin-bottom: 20px;
     background-color: #F9F9F9;  
-    min-width: 300px;
-    max-width: 300px;  
+   
     flex-direction:column;
     min-height: 500px;
-    max-height: 800px;
+    
     border-radius:10px ;
     align-items: left;
     margin-left: 10px;

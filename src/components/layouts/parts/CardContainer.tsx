@@ -28,8 +28,7 @@ export const CardContainer = () => {
     const indexOfLastPostSec=currentSecondPage * postPerSecPage;
     const indexOfFirstPostSec=indexOfLastPostSec- postPerPage; 
     const seconPagiData=dataSec.slice(indexOfFirstPostSec,indexOfLastPostSec);
-
-   
+  
 
     
     useEffect(() => { 
@@ -54,10 +53,8 @@ export const CardContainer = () => {
              <CardContainer.Title>
                     NFT Artwork
             </CardContainer.Title>   
-            <CardContainer.Artwork>
-                   
-                <Card cardItems={currentData}/>
-                
+            <CardContainer.Artwork>                   
+                <Card cardItems={currentData}/>              
 
             </CardContainer.Artwork>
             <Pagination
