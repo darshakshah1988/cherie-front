@@ -4,7 +4,7 @@ type  Image={
   }
   
   export interface ArtCardData {
-    status?: 'sold' | 'on sale';
+    status?: 'sold' | 'onSale';
     title?: string; 
     Holders?: string;
     SalesRate?:string;

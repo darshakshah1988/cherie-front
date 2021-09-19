@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
 import Image from 'next/image';
-import { title } from 'process';
+
 
 
 export interface CardImage{
@@ -10,6 +10,7 @@ export interface CardImage{
 }
 
 export interface CardData {
+    status?: 'sold' | 'onSale';
     title?: string; 
     Holders?: string;
     SalesRate?:string;
@@ -31,7 +32,11 @@ export const Card = (props:CardProps) => {
               <Card.Wrapper >
               <Card.Media>
                    <Image src={prop.image.src}  layout="fill" />
-                   <Card.Button>On Sale</Card.Button>
+                   
+                   
+                   {
+                    prop.status==="sold" ? <Card.ButtonStatus>Sold</Card.ButtonStatus> : <Card.Button>On Sale</Card.Button>
+                   }
    
                </Card.Media>
                <Card.Content>
@@ -123,6 +128,20 @@ Card.Button=styled.button`
     top: 0;
     right: 0;   
     color: #1BB964;
+    font-size: 12px;
+    border-radius: 15px;
+    border: none;
+
+`;
+
+Card.ButtonStatus=styled.button`
+   
+    position:absolute;
+    margin-top: 5px;
+    margin-right: 5px;
+    top: 0;
+    right: 0;   
+    color: #FC686F;
     font-size: 12px;
     border-radius: 15px;
     border: none;

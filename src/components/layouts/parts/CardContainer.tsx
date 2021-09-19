@@ -3,33 +3,50 @@ import styled from 'styled-components';
 import Pagination from '../../filters/Pagination';
 import { useEffect, useState } from 'react';
 import Arts from '../../../admin/constants/Arts';
-import { ArtCardData } from '../../../admin/types/artTypes';
-import { number } from 'yup/lib/locale';
+import {TradionalArts} from '../../../admin/constants/Arts';
+
 
 
 
 const PageCount= Arts.length;
+const secPageCount=TradionalArts.length;
 
 
 
 export const CardContainer = () => {
 
-    const [data,setData]=useState(Arts);        
-    const [currentPage,setCurrentPage]=useState(1);
-    const [postPerPage,setPostsPerPage]=useState(6);
+    const [data]=useState(Arts);        
+    const [currentPage,setCurrentPage]=useState(1);    
+    const [postPerPage]=useState(6);
     const indexOfLastPost=currentPage * postPerPage;
     const indexOfFirstPost=indexOfLastPost- postPerPage;
     const currentData=data.slice(indexOfFirstPost,indexOfLastPost)    
+
+    const [dataSec]=useState(TradionalArts);      
+    const [currentSecondPage,setCurrentSecondPage]=useState(1); 
+    const [postPerSecPage]=useState(6);
+    const indexOfLastPostSec=currentSecondPage * postPerSecPage;
+    const indexOfFirstPostSec=indexOfLastPostSec- postPerPage; 
+    const seconPagiData=dataSec.slice(indexOfFirstPostSec,indexOfLastPostSec);
+
+   
+
     
     useEffect(() => { 
     
-    },[currentPage]);
+    },[currentData]);
     
     function handlePageClicked(number:any){
-        
-        console.log(number.selected)
         setCurrentPage(number.selected+1)
+        console.log(number)
     }
+    
+    function handelSecondPage(number:any){  
+        console.log(seconPagiData)
+        console.log(number)     
+        setCurrentSecondPage(number.selected+1)
+    }
+   
       
        
     return (
@@ -44,7 +61,7 @@ export const CardContainer = () => {
 
             </CardContainer.Artwork>
             <Pagination
-                pageCount={Math.ceil(30 / 10)}
+                pageCount={Math.ceil(PageCount/ 6)}
                 onPageChange={handlePageClicked}
                 />
 
@@ -53,12 +70,12 @@ export const CardContainer = () => {
             </CardContainer.Title>
 
             <CardContainer.Artwork>
-                <Card cardItems={data}/>
+                <Card cardItems={seconPagiData}/>
             </CardContainer.Artwork>
 
             <Pagination
-                pageCount={Math.ceil(PageCount/ 10)}
-                onPageChange={handlePageClicked}
+                pageCount={Math.ceil(secPageCount/ 6)}
+                onPageChange={handelSecondPage}
                 />
 
         </CardContainer.Wrapper>

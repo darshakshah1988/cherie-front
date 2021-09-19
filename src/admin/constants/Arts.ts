@@ -1,12 +1,14 @@
 import { ArtCardData } from "../types/artTypes"
 
-const Arts:Array<ArtCardData>=[
-    {
+export const Arts:Array<ArtCardData>=[
+    {   
+        
         title: "Tahnee LansdaleUntitled Greens, 2014",
         Holders: "345 People ",
         SalesRate: "35%",
         ResidualQuality:"345,345 Pieces",   
         PublishDate:" 13 Sep 2021",
+        status:"sold",
         image: {
             src: '/Product3.png',
             alt: 'Artist sample'
@@ -18,6 +20,7 @@ const Arts:Array<ArtCardData>=[
         SalesRate: "35%",
         ResidualQuality:"345,345 Pieces",   
         PublishDate:" 13 Sep 2021",
+        status:"onSale",
         image: {
             src: '/ImageProd.png',
             alt: 'Artist sample'
@@ -100,6 +103,7 @@ const Arts:Array<ArtCardData>=[
           SalesRate: "35%",
           ResidualQuality:"345,345 Pieces",   
           PublishDate:" 13 Sep 2021",
+          status:"onSale",
           image: {
               src: '/Product3.png',
               alt: 'Artist sample'
@@ -110,6 +114,7 @@ const Arts:Array<ArtCardData>=[
         SalesRate: "35%",
         ResidualQuality:"345,345 Pieces",   
         PublishDate:" 13 Sep 2021",
+        status:"sold",
         image: {
             src: '/Product3.png',
             alt: 'Artist sample'
@@ -120,6 +125,7 @@ const Arts:Array<ArtCardData>=[
       SalesRate: "35%",
       ResidualQuality:"345,345 Pieces",   
       PublishDate:" 13 Sep 2021",
+      status:"onSale",
       image: {
           src: '/Product3.png',
           alt: 'Artist sample'
@@ -130,6 +136,7 @@ const Arts:Array<ArtCardData>=[
     SalesRate: "35%",
     ResidualQuality:"345,345 Pieces",   
     PublishDate:" 13 Sep 2021",
+    status:"sold",
     image: {
         src: '/Product3.png',
         alt: 'Artist sample'
@@ -137,4 +144,104 @@ const Arts:Array<ArtCardData>=[
 },
 
 ]
+
+
+export const TradionalArts:Array<ArtCardData>=[
+  {   
+      
+      title: "Trad LansdaleUntitled Greens, 2014",
+      Holders: "345 People ",
+      SalesRate: "35%",
+      ResidualQuality:"345,345 Pieces",   
+      PublishDate:" 13 Sep 2021",
+      status:"sold",
+      image: {
+          src: '/Product3.png',
+          alt: 'Artist sample'
+        }
+  },
+
+  {   
+      
+    title: "Trad LansdaleUntitled Greens, 2014",
+    Holders: "345 People ",
+    SalesRate: "35%",
+    ResidualQuality:"345,345 Pieces",   
+    PublishDate:" 13 Sep 2021",
+    status:"sold",
+    image: {
+        src: '/Product3.png',
+        alt: 'Artist sample'
+      }
+},
+{   
+      
+  title: "Tahnee LansdaleUntitled Greens, 2014",
+  Holders: "345 People ",
+  SalesRate: "35%",
+  ResidualQuality:"345,345 Pieces",   
+  PublishDate:" 13 Sep 2021",
+  status:"sold",
+  image: {
+      src: '/Product3.png',
+      alt: 'Artist sample'
+    }
+},
+{   
+      
+  title: "Tahnee LansdaleUntitled Greens, 2014",
+  Holders: "345 People ",
+  SalesRate: "35%",
+  ResidualQuality:"345,345 Pieces",   
+  PublishDate:" 13 Sep 2021",
+  status:"sold",
+  image: {
+      src: '/Product3.png',
+      alt: 'Artist sample'
+    }
+},
+{   
+      
+  title: "Trad LansdaleUntitled Greens, 2014",
+  Holders: "345 People ",
+  SalesRate: "35%",
+  ResidualQuality:"345,345 Pieces",   
+  PublishDate:" 13 Sep 2021",
+  status:"sold",
+  image: {
+      src: '/Product3.png',
+      alt: 'Artist sample'
+    }
+},
+{   
+      
+  title: "Trad LansdaleUntitled Greens, 2014",
+  Holders: "345 People ",
+  SalesRate: "35%",
+  ResidualQuality:"345,345 Pieces",   
+  PublishDate:" 13 Sep 2021",
+  status:"sold",
+  image: {
+      src: '/Product3.png',
+      alt: 'Artist sample'
+    }
+},
+{   
+      
+  title: "Trad LansdaleUntitled Greens, 2014",
+  Holders: "345 People ",
+  SalesRate: "35%",
+  ResidualQuality:"345,345 Pieces",   
+  PublishDate:" 13 Sep 2021",
+  status:"sold",
+  image: {
+      src: '/Product3.png',
+      alt: 'Artist sample'
+    }
+},
+]
+
+
+
+
 export default Arts;
