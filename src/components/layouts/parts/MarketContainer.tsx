@@ -1,15 +1,21 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { css } from 'styled-components';
 import Pagination from '../../filters/Pagination';
 import { MarketCard } from './MarketCard';
+import Arts from '../../../admin/constants/Arts';
 
+
+const PageCount= Arts.length;
 
 function handelOnClick(){
 
 }
 
 export const MarketContainer = () => {
+
+    const [data]=useState(Arts);  
+
     return (
         <MarketContainer.Wrapper>
             <MarketContainer.SwitchViewButtons>
@@ -23,12 +29,8 @@ export const MarketContainer = () => {
             </MarketContainer.SwitchViewButtons>
 
             <MarketContainer.CardContainer>                
-                <MarketCard></MarketCard>
-                <MarketCard></MarketCard>
-                <MarketCard></MarketCard>
-                <MarketCard></MarketCard>
-                <MarketCard></MarketCard>
-                <MarketCard></MarketCard>
+                <MarketCard cardItems={data}></MarketCard>
+                
             </MarketContainer.CardContainer>
 
 

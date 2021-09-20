@@ -2,29 +2,58 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 
-export const MarketCard = () => {
+
+export interface CardImage{
+    src:string;
+    alt:string;
+}
+
+export interface CardData {
+    status?: 'sold' | 'onSale';
+    title?: string; 
+    Holders?: string;
+    SalesRate?:string;
+    ResidualQuality?:string; 
+    PublishDate?:string;
+    image:CardImage; 
+}
+export interface CardProps{
+    cardItems:CardData[];
+}
+
+
+export const MarketCard = (props:CardProps) => {
     return (
         <MarketCard.Wrapper>
-                <MarketCard.Media>
-                    <Image src="/Product3.png" height="300px" width="300" />
-                </MarketCard.Media>
-                <MarketCard.Body>
-                    <MarketCard.Content>
-                        Yayoi Kusama, 2014
-                    </MarketCard.Content>
+                {
+                    props.cardItems.map(prop=>(
+                        <MarketCard.Card>
+                            <MarketCard.Media>
+                            <Image src={prop.image.src}height="300px" width="300" />
+                            </MarketCard.Media>
+                            <MarketCard.Body>
+                                <MarketCard.Content>
+                                    {prop.title}
+                                </MarketCard.Content>
 
-                    <MarketCard.ContentRed>
-                        Pumpkin, 1982
-                    </MarketCard.ContentRed>
-                   </MarketCard.Body>
+                                <MarketCard.ContentRed>
+                                    {prop.ResidualQuality}
+                                </MarketCard.ContentRed>
+                            </MarketCard.Body>
+                            </MarketCard.Card>
+                      
+
+                    ))
+                }
+                
 
         </MarketCard.Wrapper>
     )
 }
 
 
-MarketCard.Wrapper=styled.div`
-    display: flex;
+MarketCard.Card=styled.div`
+     display: flex;
     width: 100%;
    margin-left: 10px;
     flex-direction: row;
@@ -33,7 +62,12 @@ MarketCard.Wrapper=styled.div`
     margin-top: 20px;
     background-color: #F9F9F9;
     border-radius: 10px;
+`;
 
+MarketCard.Wrapper=styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 `;
 
 

@@ -92,8 +92,6 @@ export const Card = (props:CardProps) => {
                </Card.Content>
           </Card.Wrapper>
 
-
-
            ))}
                     
        </Card.FullCard>

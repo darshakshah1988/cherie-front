@@ -1,8 +1,7 @@
 import { ArtCardData } from "../types/artTypes"
 
 export const Arts:Array<ArtCardData>=[
-    {   
-        
+    {     
         title: "Tahnee LansdaleUntitled Greens, 2014",
         Holders: "345 People ",
         SalesRate: "35%",
