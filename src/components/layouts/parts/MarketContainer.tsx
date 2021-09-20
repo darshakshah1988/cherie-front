@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled, { css } from 'styled-components';
 import Pagination from '../../filters/Pagination';
 import { MarketCard } from './MarketCard';
@@ -8,13 +8,23 @@ import Arts from '../../../admin/constants/Arts';
 
 const PageCount= Arts.length;
 
-function handelOnClick(){
-
-}
 
 export const MarketContainer = () => {
 
     const [data]=useState(Arts);  
+    const [currentPage,setCurrentPage]=useState(1);    
+    const [postPerPage]=useState(6);
+    const indexOfLastPost=currentPage * postPerPage;
+    const indexOfFirstPost=indexOfLastPost- postPerPage;
+    const currentData=data.slice(indexOfFirstPost,indexOfLastPost)    
+
+    useEffect(() => {     
+    },[currentData]);
+
+    function handlePageClicked(number:any){
+        setCurrentPage(number.selected+1)
+       
+    }
 
     return (
         <MarketContainer.Wrapper>
@@ -29,15 +39,15 @@ export const MarketContainer = () => {
             </MarketContainer.SwitchViewButtons>
 
             <MarketContainer.CardContainer>                
-                <MarketCard cardItems={data}></MarketCard>
+                <MarketCard cardItems={currentData}></MarketCard>
                 
             </MarketContainer.CardContainer>
 
 
 
             <Pagination
-                pageCount={Math.ceil(30/ 10)}
-                onPageChange={handelOnClick}
+                pageCount={Math.ceil(PageCount/ 6)}
+                onPageChange={handlePageClicked}
                 />
         </MarketContainer.Wrapper>
     )

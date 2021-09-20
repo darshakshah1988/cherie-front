@@ -37,12 +37,10 @@ export const CardContainer = () => {
     
     function handlePageClicked(number:any){
         setCurrentPage(number.selected+1)
-        console.log(number)
+      
     }
     
     function handelSecondPage(number:any){  
-        console.log(seconPagiData)
-        console.log(number)     
         setCurrentSecondPage(number.selected+1)
     }
    
