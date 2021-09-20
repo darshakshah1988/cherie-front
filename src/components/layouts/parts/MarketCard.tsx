@@ -16,10 +16,7 @@ export const MarketCard = () => {
                     <MarketCard.ContentRed>
                         Pumpkin, 1982
                     </MarketCard.ContentRed>
-
-
-                    
-                </MarketCard.Body>
+                   </MarketCard.Body>
 
         </MarketCard.Wrapper>
     )

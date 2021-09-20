@@ -111,7 +111,7 @@ Card.Wrapper = styled.div`
    
     flex-direction:column;
     min-height: 500px;
-    
+    width: 30%;
     border-radius:10px ;
     align-items: left;
     margin-left: 10px;
@@ -209,6 +209,7 @@ Card.FullCard=styled.div`
     flex-direction: row;
     max-width: 100%;
     flex-wrap: wrap;
+   
 
 `;
 

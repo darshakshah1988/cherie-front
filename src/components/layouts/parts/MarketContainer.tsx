@@ -1,6 +1,6 @@
 
 import React from 'react'
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Pagination from '../../filters/Pagination';
 import { MarketCard } from './MarketCard';
 
@@ -13,12 +13,12 @@ export const MarketContainer = () => {
     return (
         <MarketContainer.Wrapper>
             <MarketContainer.SwitchViewButtons>
-                <MarketContainer.Button>
+                <MarketContainer.Button >
                      Traditional Artwork
                 </MarketContainer.Button>
-                <MarketContainer.Button>
+                <MarketContainer.ActiveButton>
                      NFT Artwork
-                </MarketContainer.Button>
+                </MarketContainer.ActiveButton>
 
             </MarketContainer.SwitchViewButtons>
 
@@ -73,7 +73,7 @@ MarketContainer.CardContainer= styled.div`
 
 `;
 
-MarketContainer.Button=styled.button`   
+MarketContainer.Button=styled.button`
     font-family: Poppins;
     width: 200px;
     height: 50px;
@@ -88,6 +88,32 @@ MarketContainer.Button=styled.button`
     :hover{
         background-color:  #F9F9F9;
 ;
+    }
+    :active{
+        background-color:  #F9F9F9;
+    }
+
+`;
+
+
+MarketContainer.ActiveButton=styled.button`   
+    font-family: Poppins;
+    width: 200px;
+    height: 50px;
+    left: 675px;
+    top: 231px; 
+    color:#FC6076;
+    font-size: 12px;
+    border-radius: 24px;
+    border: none;
+    margin-top: 15px;
+    
+    :hover{
+        background-color:  #F9F9F9;
+;
+    }
+    :active{
+        background-color:  #F9F9F9;
     }
 
 `;

@@ -17,41 +17,53 @@ export default function Footer() {
 
           <div>Download On App Store</div>
 
-          <div>
-              2 Image
-          </div>
+          <Footer.StoreImage>
+            <Image src="/playstore.png" height="30px"width="90px"></Image>
+            <Image src="/googleplaystore.svg" height="30px"width="90px"></Image>
+          </Footer.StoreImage>
       </Footer.Branding>
       
       
       <Footer.Links>
-        <div>
+        <Footer.LinkTitle>
           Links
-        </div>
-        <div>
-            <ul>
-                <li>Home  </li>
-                <li>About Us</li>
-                <li>Store</li>
-                <li>Marketplace</li>
+        </Footer.LinkTitle>
+        <Footer.LinkChild>
+            <Footer.UL>
+                <Footer.LI>Home  </Footer.LI>
+                <Footer.LI>About Us</Footer.LI>
+                <Footer.LI>Store</Footer.LI>
+                <Footer.LI>Marketplace</Footer.LI>
+            </Footer.UL>
 
-            </ul>
-         </div>
+            <Footer.LinkChild>
+              <Footer.UL>
+                      <Footer.LI>Contact Us  </Footer.LI>
+                      <Footer.LI>News</Footer.LI>
+                      <Footer.LI>Terms & Condition</Footer.LI>
+                      <Footer.LI>Privacy Policy</Footer.LI>
 
-        <div>
-              <ul>
-                      <li>Contact Us  </li>
-                      <li>News</li>
-                      <li>Terms & Condition</li>
-                      <li>Privacy Policy</li>
+                </Footer.UL>
+        </Footer.LinkChild>
 
-                </ul>
-        </div>
-       
-
+         </Footer.LinkChild>
       </Footer.Links>
       <Footer.SocialLinks>
         Social Links
-        <div>Subscribe to our newsletter</div>
+        <Footer.SocialLinksIcons>
+          <Image src="/soc1.png" height="20px"width="20px"></Image>
+          <Image src="/soc2.png" height="20px"width="20px"></Image>
+        </Footer.SocialLinksIcons>
+        
+        <Footer.SubsCribe>Subscribe to our newsletter</Footer.SubsCribe>
+
+
+        <Footer.SubscribeField>
+            <Footer.SubscribeInput type="text" placeholder="Enter Email Address"/>
+            <Footer.SubscribeFieldBtn style={{position:"absolute"}}>
+              Subscribe
+            </Footer.SubscribeFieldBtn>
+        </Footer.SubscribeField>
 
       </Footer.SocialLinks>
 
@@ -68,6 +80,11 @@ export default function Footer() {
 Footer.Wrapper = styled.footer`
   background-color: #272b2f;
   padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
+
 `;
 
 Footer.Copyright = styled.p`
@@ -82,13 +99,13 @@ Footer.Container=styled.div`
     display: flex;
     flex-direction:row;
     color:#fff;
-    flex-wrap: inherit;
+    flex-wrap: wrap;
     text-align: left;
     padding: 10px;
     max-width: 1144px;
-display: flex;
-align-items: center;
-justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 
 
 `;
@@ -96,20 +113,19 @@ justify-content: center;
 Footer.Branding=styled.div`
   max-width: 40%;
 
-
-
-
 `;
 
 
 Footer.Links=styled.div`
-
+  display: flex;
+  flex-direction: column;
+  margin-top:25px;
 
 `;
 
 Footer.SocialLinks=styled.div`
-
-
+  margin-top: 25px;
+  margin-left: 20px;
 
 `;
 
@@ -122,6 +138,7 @@ Footer.BrandingTitle=styled.p`
   color: #fff;
   text-decoration: none;
   letter-spacing: 0.08em;
+  margin-bottom: 0rem;
 
 `;
 
@@ -147,8 +164,89 @@ padding-bottom: 4px;
 Footer.Brand=styled.div`
   width: auto;
   display: inline-block;
+  
 
 
 `
+Footer.SocialLinksIcons=styled.div`
+  margin-left: 10px;
+  margin-top: 25px;
+ 
 
+`;
+
+Footer.StoreImage=styled.div`
+  margin-top: 12px;
+
+`;
+
+Footer.SubscribeField=styled.div`
+        margin-left: 10px;
+        position: relative;
+
+`
+
+Footer.SubscribeFieldBtn=styled.button`        
+        width: 76px;
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+        border-radius: 15px;
+        right: 0px;
+        z-index: 2;
+        border: none;
+        top: 2px;
+        height: 30px;
+        cursor: pointer;
+        color: white;
+        background-color: #FC6076;
+        transform: translateX(2px);
+
+`;
+
+Footer.SubscribeInput=styled.input`
+        padding: 10px;
+        position: relative;
+        top: 0;
+        border-radius: 15px;
+        right: 0px;
+        z-index: 2;
+        border: none;
+        top: 2px;
+        height: 30px;       
+        cursor: pointer;
+        color: black;
+        font-size: 12px;        
+        transform: translateX(2px);
+        width: 200px;
+
+`;
+
+
+Footer.LinkChild=styled.div`
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+   
+
+`;
+
+Footer.LinkTitle=styled.div`
+  margin-left: 10px;
+`;
+
+Footer.UL=styled.ul`
+  list-style-type: none;
+  padding-left: inherit;
+  margin-top: 20px;
+
+`;
+Footer.SubsCribe=styled.p`
+   margin-left: 10px;
+
+`;
+
+Footer.LI=styled.li`
+  margin-top: 5px;
+`;
 
