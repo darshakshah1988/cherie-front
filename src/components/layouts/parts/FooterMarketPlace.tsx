@@ -51,9 +51,17 @@ export default function Footer() {
       <Footer.SocialLinks>
         Social Links
         <Footer.SocialLinksIcons>
-          <Image src="/soc1.png" height="20px"width="20px"></Image>
-          <Image src="/soc2.png" height="20px"width="20px"></Image>
+          <Footer.SocialIcon>
+            <Image src="/soc1.png" height="20px"width="20px"></Image>           
+          </Footer.SocialIcon>
+         
+          <Footer.SocialIcon>
+            <Image src="/soc2.png" height="20px"width="20px"></Image>
+          </Footer.SocialIcon>
+
         </Footer.SocialLinksIcons>
+
+        
         
         <Footer.SubsCribe>Subscribe to our newsletter</Footer.SubsCribe>
 
@@ -126,6 +134,7 @@ Footer.Links=styled.div`
 Footer.SocialLinks=styled.div`
   margin-top: 25px;
   margin-left: 20px;
+  
 
 `;
 
@@ -171,6 +180,9 @@ Footer.Brand=styled.div`
 Footer.SocialLinksIcons=styled.div`
   margin-left: 10px;
   margin-top: 25px;
+  display: flex;
+  
+  
  
 
 `;
@@ -248,5 +260,11 @@ Footer.SubsCribe=styled.p`
 
 Footer.LI=styled.li`
   margin-top: 5px;
+`;
+
+Footer.SocialIcon=styled.div`
+    margin-right: 8px;
+ 
+
 `;
 

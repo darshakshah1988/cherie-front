@@ -1,10 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
 import NavbarShop from '../layouts/parts/NavbarShop';
-import FooterShop from '../layouts/parts/FooterShop';
 
 import { CardContainer } from '../layouts/parts/CardContainer';
+import FooterMarketPlace from '../layouts/parts/FooterMarketPlace';
 
 type Props = {
   username: string | null;
@@ -16,7 +15,7 @@ export default function ShopList() {
     <ShopList.Wrapper>
       <NavbarShop></NavbarShop>   
              <CardContainer ></CardContainer>                 
-           <FooterShop></FooterShop>
+           <FooterMarketPlace></FooterMarketPlace>
     </ShopList.Wrapper>
   );
 }
