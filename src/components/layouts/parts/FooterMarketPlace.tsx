@@ -68,7 +68,7 @@ export default function Footer() {
 
         <Footer.SubscribeField>
             <Footer.SubscribeInput type="text" placeholder="Enter Email Address"/>
-            <Footer.SubscribeFieldBtn style={{position:"absolute"}}>
+            <Footer.SubscribeFieldBtn >
               Subscribe
             </Footer.SubscribeFieldBtn>
         </Footer.SubscribeField>
@@ -197,7 +197,6 @@ Footer.SubscribeField=styled.div`
         position: relative;
 
 `
-
 Footer.SubscribeFieldBtn=styled.button`        
         width: 76px;
         font-size: 12px;

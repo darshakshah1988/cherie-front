@@ -1,11 +1,17 @@
 
 import React, { useEffect, useState } from 'react'
-import styled, { css } from 'styled-components';
+import Image from 'next/image'
+
 import Pagination from '../../filters/Pagination';
 import { MarketCard } from './MarketCard';
 import Arts from '../../../admin/constants/Arts';
 import {TradionalArts} from '../../../admin/constants/Arts';
-import { toUpper } from 'lodash';
+import FilterApplyButton from '../../filters/FilterApplyButton';
+import FilterPriceDropdown from '../../filters/FilterPriceDropdown';
+import styled from 'styled-components';
+import FilterDateInput from '../../filters/FilterDateInput';
+import FilterBasicTextField from '../../filters/FilterBasicTextField';
+import { FilterDatePickerStyles } from '../../filters/filter-react-datepicker-styles';
 
 const PageCount= Arts.length;
 const PageSecCount=TradionalArts.length;
@@ -52,8 +58,36 @@ export const MarketContainer = () => {
         
     }
 
+    
+
+    function onClickApply(){
+
+
+    }
+
     return (
         <MarketContainer.Wrapper>
+            <MarketContainer.Filter>
+               <MarketContainer.FilterLeft>
+                    <FilterBasicTextField styled={[]} value={ "search"} placeholder={"Search By Type or Name" } onChange={onClickApply}></FilterBasicTextField>
+                    <MarketContainer.Image>
+                        <Image src="/SearchIcon.svg" width="20px" height="20px"/>
+                    </MarketContainer.Image>
+
+                    
+               </MarketContainer.FilterLeft>
+                
+                <MarketContainer.FilterRight>
+                    <FilterPriceDropdown value={"Price Low"} styled={[]} onDropdownChanger={onClickApply}/>                
+                    <FilterDateInput styled={FilterDatePickerStyles} id={"1"} minDate={new Date(2010)} maxDate={new Date(2050)} placeholder={"Filter by sales Date"}   />    
+                    <FilterApplyButton  onClickHandler={onClickApply} styled={[]} disabled={false}/>
+                </MarketContainer.FilterRight>
+                
+          
+           
+            </MarketContainer.Filter>
+
+
             <MarketContainer.SwitchViewButtons>
                 
                 <MarketContainer.Button onClick={onClickTraditional} primary={change}>
@@ -94,7 +128,10 @@ export const MarketContainer = () => {
 
 
 MarketContainer.Wrapper=styled.div`
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:10px;
 
 `;
 
@@ -166,3 +203,48 @@ MarketContainer.ActiveButton=styled.button`
     }
 
 `;
+
+MarketContainer.Filter=styled.div`
+display: flex;
+align-items: center;
+max-width: 1140px;
+padding-right: 12px;
+padding-left: 12px;
+width: 100%;
+
+
+`;
+MarketContainer.FilterRight=styled.div`
+    display: flex;
+    flex: 65%;
+    justify-content:end;
+   
+    
+
+
+`
+MarketContainer.FilterLeft=styled.div`
+    display: flex;
+    flex: 45%;
+    position: relative;
+    
+
+
+`
+MarketContainer.Image=styled.div`
+        width: 50px;
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+       
+        right: 0px;
+        z-index: 2;
+        border: none;
+        top: 15px;
+        height: 30px;
+        cursor: pointer;
+        color: white;        
+        transform: translateX(2px);
+
+`;
+

@@ -3,12 +3,14 @@ import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import { rem } from 'polished';
 import { useForm } from 'react-hook-form';
 
+
 // Types
 type Props = {
   value?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   styled?: FlattenSimpleInterpolation;
+  
 };
 
 // This component are controlled from the parent component.
@@ -31,6 +33,7 @@ export default function FilterBasicTextField(props: Props) {
         onChange={onChange}
         $styled={styled}
       />
+      
     </Fragment>
   );
 }
@@ -81,3 +84,4 @@ FilterBasicTextField.Input = styled.input<{
     }
   }};
 `;
+
