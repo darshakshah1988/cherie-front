@@ -63,7 +63,7 @@ export const CardContainer = () => {
             <CardContainer.Title>
                 Traditional Artwork
             </CardContainer.Title>
-
+            
             <CardContainer.Artwork>
                 <Card cardItems={seconPagiData}/>
             </CardContainer.Artwork>

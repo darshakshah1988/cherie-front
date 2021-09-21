@@ -41,8 +41,6 @@ export const MarketCard = (props:CardProps) => {
                                 </MarketCard.ContentRed>
                             </MarketCard.Body>
                             </MarketCard.Card>
-                      
-
                     ))
                 }
                 
@@ -53,9 +51,9 @@ export const MarketCard = (props:CardProps) => {
 
 
 MarketCard.Card=styled.div`
-     display: flex;
+    display: flex;
     width: 100%;
-   margin-left: 10px;
+    margin-left: 10px;
     flex-direction: row;
     max-width: 300px;
     flex-wrap: wrap;
