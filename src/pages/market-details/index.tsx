@@ -1,15 +1,13 @@
 import React,{ Fragment} from 'react';
-import MarketList from '../../components/market/marketList';
+import MarketDetailsList from '../../components/market-details/marketDetailsList';
 
 
-export default function MarketPage() {
+
+export default function MarketDetailPage() {
   return (
      <Fragment>
-        <MarketList></MarketList>
+        <MarketDetailsList/>
      </Fragment>
-      
-      
-      
       
   );
 }

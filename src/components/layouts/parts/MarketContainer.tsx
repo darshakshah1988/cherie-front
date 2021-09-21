@@ -24,7 +24,7 @@ export const MarketContainer = () => {
 
     const [data]=useState(Arts);  
     const [currentPage,setCurrentPage]=useState(1);    
-    const [postPerPage]=useState(6);
+    const [postPerPage]=useState(12);
     const indexOfLastPost=currentPage * postPerPage;
     const indexOfFirstPost=indexOfLastPost- postPerPage;
     const currentData=data.slice(indexOfFirstPost,indexOfLastPost)   
@@ -32,7 +32,7 @@ export const MarketContainer = () => {
     
     const [dataSec]=useState(TradionalArts);      
     const [currentSecondPage,setCurrentSecondPage]=useState(1); 
-    const [postPerSecPage]=useState(6);
+    const [postPerSecPage]=useState(12);
     const indexOfLastPostSec=currentSecondPage * postPerSecPage;
     const indexOfFirstPostSec=indexOfLastPostSec- postPerPage; 
     const seconPagiData=dataSec.slice(indexOfFirstPostSec,indexOfLastPostSec);
@@ -112,11 +112,11 @@ export const MarketContainer = () => {
                 change? 
                 
                 <Pagination
-                        pageCount={Math.ceil(PageSecCount/ 6)}
+                        pageCount={Math.ceil(PageSecCount/ 12)}
                         onPageChange={handlePageClicked}
                 />:
                 <Pagination
-                        pageCount={Math.ceil(PageCount/ 6)}
+                        pageCount={Math.ceil(PageCount/ 12)}
                         onPageChange={handlePageClicked}
                         />
             }
