@@ -216,7 +216,7 @@ width: 100%;
 `;
 MarketContainer.FilterRight=styled.div`
     display: flex;
-    flex: 65%;
+    flex: 70%;
     justify-content:end;
    
     

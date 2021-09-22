@@ -19,5 +19,7 @@ export default function MarketList() {
   text-align: center;
   margin: 0 auto;
   width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
   
 `;
