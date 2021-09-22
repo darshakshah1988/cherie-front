@@ -13,7 +13,7 @@ type Props = {
 export default function ShopList() {
   return (
     <ShopList.Wrapper>
-      <NavbarShop></NavbarShop>   
+      <NavbarShop></NavbarShop>                 
              <CardContainer ></CardContainer>                 
            <FooterMarketPlace></FooterMarketPlace>
     </ShopList.Wrapper>
@@ -26,6 +26,9 @@ ShopList.Wrapper = styled.div`
   width: 100%;
   padding-left: 12px;
   padding-right: 12px;
+  
+
+
 `;
 
 

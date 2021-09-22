@@ -132,8 +132,6 @@ MarketContainer.Wrapper=styled.div`
     flex-direction: column;
     align-items: center;
     margin-top:10px;
-    padding-right: 12px;
-    padding-left: 12px;
 
 `;
 
@@ -237,8 +235,7 @@ MarketContainer.Image=styled.div`
         width: 50px;
         font-size: 12px;
         position: absolute;
-        top: 0;
-       
+        top: 0;       
         right: 0px;
         z-index: 2;
         border: none;
