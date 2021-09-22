@@ -61,7 +61,7 @@ export const CardContainer = () => {
 
             <CardContainer.FilterBar>
                     <CardContainer.FilterLeft>
-                                        <FilterBasicTextField styled={[]} value={ "search"} placeholder={"Search By Type or Name" } onChange={onClickApply}></FilterBasicTextField>
+                                        <FilterBasicTextField styled={[]} value={ ""} placeholder={"Search By Type or Name" } onChange={onClickApply}></FilterBasicTextField>
                                         <CardContainer.Image>
                                             <Image src="/SearchIcon.svg" width="20px" height="20px"/>
                                         </CardContainer.Image>
@@ -174,7 +174,7 @@ CardContainer.Image=styled.div`
 `;
 
 CardContainer.FilterBar=styled.div`
-margin-top: 15px;
+margin-top: 10px;
 display: flex;
 align-items: center;
 max-width: 1140px;

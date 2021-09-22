@@ -69,7 +69,7 @@ export const MarketContainer = () => {
         <MarketContainer.Wrapper>
             <MarketContainer.Filter>
                <MarketContainer.FilterLeft>
-                    <FilterBasicTextField styled={[]} value={ "search"} placeholder={"Search By Type or Name" } onChange={onClickApply}></FilterBasicTextField>
+                    <FilterBasicTextField styled={[]} value={ ""} placeholder={"Search By Type or Name" } onChange={onClickApply}></FilterBasicTextField>
                     <MarketContainer.Image>
                         <Image src="/SearchIcon.svg" width="20px" height="20px"/>
                     </MarketContainer.Image>
@@ -132,6 +132,8 @@ MarketContainer.Wrapper=styled.div`
     flex-direction: column;
     align-items: center;
     margin-top:10px;
+    padding-right: 12px;
+    padding-left: 12px;
 
 `;
 

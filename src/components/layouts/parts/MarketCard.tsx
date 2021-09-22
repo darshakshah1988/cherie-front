@@ -52,7 +52,7 @@ export const MarketCard = (props:CardProps) => {
 
 MarketCard.Card=styled.div`
     display: flex;
-    width: 100%;
+    width: 30%;
     margin-left: 10px;
     flex-direction: row;
     max-width: 300px;
